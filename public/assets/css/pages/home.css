@@ -1,0 +1,261 @@
+/* =====================================
+   CLEAN FINTECH HERO
+===================================== */
+
+.landing-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fbbe1a 0%, #fff6dc 100%);
+    overflow: hidden;
+}
+
+/* Headline */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1f2d3d;
+}
+
+.text-highlight {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0 8px;
+    border-radius: 6px;
+}
+
+/* Buttons */
+.btn-hero-primary {
+    background: #111;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    background: #000;
+}
+
+.btn-hero-outline {
+    border: 2px solid #111;
+    color: #111;
+    font-weight: 600;
+}
+
+.btn-hero-outline:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* Stats */
+.hero-stats h3 {
+    font-weight: 800;
+    color: #1f2d3d;
+}
+
+/* Floating Cards */
+.hero-cards {
+    position: relative;
+    height: 450px;
+}
+
+.floating-card {
+    position: absolute;
+    width: 240px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-card .icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(251, 190, 26, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fbbe1a;
+}
+
+/* Positioning */
+.floating-card:nth-child(1) {
+    top: 20%;
+    left: 10%;
+}
+
+.card-2 {
+    top: 50%;
+    right: 5%;
+    animation-delay: 2s;
+}
+
+.card-3 {
+    bottom: 10%;
+    left: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-cards {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+/*.section-py {*/
+/*    padding-block: 6.25rem;*/
+/*}*/
+
+/*.landing-hero {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+
+/*    !* FULL HEIGHT *!*/
+/*    min-height: 100svh;*/
+
+/*    display: flex;*/
+/*    align-items: center;*/
+
+/*    padding-block-start: 10rem;*/
+
+/*    background: linear-gradient(-45deg, #fff4d6, #ffe9a6, #ffffff);*/
+/*    background-size: 300% 300%;*/
+/*    animation: gradientShift 12s ease infinite;*/
+/*}*/
+
+/*@keyframes gradientShift {*/
+/*    0% { background-position: 0% 50%; }*/
+/*    50% { background-position: 100% 50%; }*/
+/*    100% { background-position: 0% 50%; }*/
+/*}*/
+
+/*!* Hero Title *!*/
+/*.landing-hero .hero-title {*/
+/*    font-size: calc(1.5rem + 1.5vw);*/
+/*    font-weight: 800;*/
+/*    line-height: 1.2;*/
+/*    color: #111;*/
+/*}*/
+
+/*@media (min-width: 1200px) {*/
+/*    .landing-hero .hero-title {*/
+/*        font-size: 3rem;*/
+/*    }*/
+/*}*/
+
+/*!* Fade-in animation *!*/
+/*.hero-text-box {*/
+/*    animation: fadeInUp 1s ease forwards;*/
+/*}*/
+
+/*@keyframes fadeInUp {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*        transform: translateY(20px);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 1;*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*}*/
+
+/*!* CTA Buttons *!*/
+/*.btn-hero-primary {*/
+/*    background-color: #fbbe1a;*/
+/*    border: none;*/
+/*    color: #000;*/
+/*    font-weight: 600;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.btn-hero-primary:hover {*/
+/*    background-color: #e0a913;*/
+/*    transform: translateY(-3px);*/
+/*}*/
+
+/*.btn-hero-outline {*/
+/*    border: 2px solid #fbbe1a;*/
+/*    color: #111;*/
+/*    font-weight: 600;*/
+/*}*/
+
+/*.btn-hero-outline:hover {*/
+/*    background-color: #fbbe1a;*/
+/*    color: #000;*/
+/*}*/
+
+/*!* Floating Stats *!*/
+/*.hero-stats h3 {*/
+/*    font-weight: 800;*/
+/*    color: #111;*/
+/*    animation: floatUpDown 4s ease-in-out infinite;*/
+/*}*/
+
+/*@keyframes floatUpDown {*/
+/*    0%, 100% { transform: translateY(0); }*/
+/*    50% { transform: translateY(-6px); }*/
+/*}*/
+
+/*!* Trust Badges *!*/
+/*.trust-badges .badge {*/
+/*    font-size: 0.85rem;*/
+/*    padding: 0.6rem 1rem;*/
+/*    border-radius: 50px;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.trust-badges .badge:hover {*/
+/*    transform: translateY(-4px);*/
+/*    box-shadow: 0 8px 20px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*!* Responsive spacing *!*/
+/*@media (max-width: 767px) {*/
+/*    .landing-hero {*/
+/*        padding-block-start: 7rem;*/
+/*    }*/
+/*}*/
+
+/* Useful features */
+.landing-features .features-icon-wrapper .features-icon-box .features-icon-description {
+  margin-block: 0;
+  margin-inline: auto;
+  max-inline-size: 19.25rem;
+}
+
+/* FAQs */
+.landing-faq {
+  border-top-left-radius: 3.75rem;
+  border-top-right-radius: 3.75rem;
+}
+.landing-faq .faq-image {
+  inline-size: 100%;
+  max-inline-size: 40rem;
+}
+
+.landing-cta .cta-title {
+  font-size: 2.125rem;
+}
+@media (max-width: 767.98px) {
+  .landing-cta .cta-title {
+    font-size: 1.8rem;
+  }
+}

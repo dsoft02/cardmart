@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* Authentication
+******************************************************************************* */
+.authentication-wrapper {
+  --bs-auth-basic-inner-max-width: 600px;
+  display: flex;
+  flex-basis: 100%;
+  inline-size: 100%;
+  /* For two-steps auth */
+}
+.authentication-wrapper .authentication-bg {
+  background-color: var(--bs-paper-bg);
+}
+.authentication-wrapper .authentication-inner {
+  inline-size: 100%;
+}
+.authentication-wrapper .app-brand-logo.demo svg {
+  block-size: 38px;
+  inline-size: 22px;
+}
+.authentication-wrapper.authentication-basic {
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.authentication-wrapper.authentication-basic .authentication-inner {
+  position: relative;
+  max-inline-size: var(--bs-auth-basic-inner-max-width);
+}
+.authentication-wrapper.authentication-basic .authentication-inner .card {
+  z-index: 1;
+}
+@media (min-width: 576px) {
+  .authentication-wrapper.authentication-basic .authentication-inner .card {
+    padding: 1.5rem;
+  }
+}
+.authentication-wrapper.authentication-basic .authentication-inner .card .app-brand {
+  margin-block-end: 1.5rem;
+}
+.authentication-wrapper .auth-input-wrapper .auth-input {
+  font-size: 150%;
+  max-inline-size: 50px;
+  padding-inline: 0.4rem;
+}
+@media (max-width: 575.98px) {
+  .authentication-wrapper .auth-input-wrapper .auth-input {
+    font-size: 1.125rem;
+  }
+}

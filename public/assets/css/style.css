@@ -1,0 +1,422 @@
+
+.menu .app-brand {
+  height: 64px;
+  margin-top: 12px;
+}
+
+.app-brand-logo svg {
+  width: 48px;
+  height: 48px;
+}
+
+.app-brand-text {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+/* ! For .layout-navbar-fixed added fix padding top to .layout-page */
+/* Detached navbar */
+.layout-navbar-fixed .layout-wrapper:not(.layout-horizontal):not(.layout-without-menu) .layout-page {
+  padding-top: 74px !important;
+}
+/* Default navbar */
+.layout-navbar-fixed .layout-wrapper:not(.layout-without-menu) .layout-page {
+  padding-top: 64px !important;
+}
+.docs-page .layout-navbar-fixed.layout-wrapper:not(.layout-without-menu) .layout-page,
+.docs-page .layout-menu-fixed.layout-wrapper:not(.layout-without-menu) .layout-page {
+  padding-top: 62px !important;
+}
+
+/* Navbar page z-index issue solution */
+.content-wrapper .navbar {
+  z-index: auto;
+}
+
+/*
+* Content
+******************************************************************************/
+
+.demo-blocks > * {
+  display: block !important;
+}
+
+.demo-inline-spacing > * {
+  margin: 1rem 0.375rem 0 0 !important;
+}
+
+/* ? .demo-vertical-spacing class is used to have vertical margins between elements. To remove margin-top from the first-child, use .demo-only-element class with .demo-vertical-spacing class. For example, we have used this class in forms-input-groups.html file. */
+.demo-vertical-spacing > * {
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+.demo-vertical-spacing.demo-only-element > :first-child {
+  margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-lg > * {
+  margin-top: 1.875rem !important;
+  margin-bottom: 0 !important;
+}
+.demo-vertical-spacing-lg.demo-only-element > :first-child {
+  margin-top: 0 !important;
+}
+
+.demo-vertical-spacing-xl > * {
+  margin-top: 5rem !important;
+  margin-bottom: 0 !important;
+}
+.demo-vertical-spacing-xl.demo-only-element > :first-child {
+  margin-top: 0 !important;
+}
+
+/* Dropdown buttons going out of small screens */
+@media (max-width: 576px) {
+  #dropdown-variation-demo .btn-group .text-truncate {
+    width: 231px;
+    position: relative;
+  }
+  #dropdown-variation-demo .btn-group .text-truncate::after {
+    position: absolute;
+    top: 45%;
+    right: 0.65rem;
+  }
+}
+
+/*
+* Layout demo
+******************************************************************************/
+
+.layout-demo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.layout-demo-placeholder img {
+  width: 900px;
+}
+.layout-demo-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+.w-5 {
+    width: 1.25rem;
+}
+
+.h-5 {
+    height: 1.25rem;
+}
+
+.w-14 {
+    width: 3.5rem;
+}
+.h-14 {
+    height: 3.5rem;
+}
+
+.w-22{
+    width:22px !important;
+}
+
+.h-22{
+    height:22px !important;
+}
+
+.siteicon{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.siteicon-sm{
+    width: 2rem;
+    height: 2rem;
+}
+.app-brand-text-sm{
+    font-size: 1.4rem;
+}
+
+
+.gallery-delete-btn {
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(220, 53, 69, 0.9);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.gallery-delete-btn:hover {
+    background: rgba(200, 35, 51, 1);
+}
+
+.exam-card {
+    border: none;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.exam-card img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+
+.exam-card-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    width: 100%;
+    background-color: #e9ebef;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #dbe1ec;
+}
+
+.exam-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin-bottom: 0;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+}
+
+/*.breadcrumb-title {*/
+/*    font-size: 28px;*/
+/*    line-height: 1;*/
+/*    margin-bottom: 8px;*/
+/*    font-weight: 600;*/
+/*    letter-spacing: 1px;*/
+/*}*/
+
+/* ===== Exam Hero Gradient ===== */
+
+.page-hero {
+    background: linear-gradient(
+        135deg,
+        #fbbe1a 0%,
+        #1f2937 35%,
+        #111827 100%
+    );
+    padding-block: 4.28rem !important;
+    padding-block-start: 7.28rem !important;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top right,
+        rgba(251, 190, 26, 0.25),
+        transparent 60%
+    );
+}
+
+.page-hero .breadcrumb-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.page-hero .breadcrumb a:hover {
+    color: #ffffff !important;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #eeeeee;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+
+.order-card-link {
+    display: block;
+}
+
+.order-card {
+    border-radius: 18px;
+    transition: all 0.25s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.order-avatar {
+    width: 72px;
+    height: 72px;
+    background: #f4f5f7;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.order-avatar img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Date range */
+.date-filter-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.date-filter-input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.date-filter-input:focus {
+    outline: none;
+    border-color: #696cff;
+    background: #fff;
+}
+
+.calendar-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 18px;
+    color: #9ca3af;
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 12px;
+    font-size: 18px;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.clear-date {
+    position: absolute;
+    right: 32px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.empty-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    background: #f4f5f7;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-icon i {
+    font-size: 32px;
+    color: var(--bs-primary);
+}
+
+
+.detail-row h6 {
+    font-size: 14px;
+}
+
+.pin-card {
+    background: #f9fafb;
+    padding: 14px 18px;
+    border-radius: 14px;
+}
+
+.pin-visual-card {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    color: #222;
+}
+
+.card-overlay {
+    height: 100%;
+    padding: 24px;
+    background: rgba(255,255,255,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copy-btn {
+    background: #e8f7ea;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #198754;
+    cursor: pointer;
+}
+.copy-btn.copy-btn-sq {
+    display: inline-flex;
+}
+
+.card-action-btn {
+    background: rgba(255,255,255,0.85);
+    border: none;
+    border-radius: 10px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    transition: 0.2s ease;
+}
+
+.card-action-btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
