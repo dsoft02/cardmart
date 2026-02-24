@@ -18,17 +18,17 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Ebenezer Ogidiolu',
                 'email' => 'ebendev09@gmail.com',
-                'password' => Hash::make('user123'),
+                'password' => Hash::make('user1234'),
                 'role' => User::ROLE_USER,
                 'email_verified_at' => now(),
             ]
         );
 
         User::updateOrCreate(
-            ['email' => 'admin@epinstore.com'],
+            ['email' => 'admin@cardmart.com'],
             [
                 'name' => 'Admin User',
-                'email' => 'admin@epinstore.com',
+                'email' => 'admin@cardmart.com',
                 'password' => Hash::make(env('ADMIN_PASSWORD', 'password')),
                 'role' => User::ROLE_ADMIN,
                 'email_verified_at' => now(),

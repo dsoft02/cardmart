@@ -52,7 +52,6 @@ class GoogleAuthController extends Controller
                 'name' => $name,
                 'email' => $email,
                 'google_id' => $googleUser->id,
-                'avatar' => $googleUser->avatar,
                 'email_verified_at' => now(),
                 'password' => null,
                 'role' => User::ROLE_USER,

@@ -4,7 +4,7 @@
             class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
             <div class="mb-2 mb-md-0">
                 © {{ date('Y') }}
-                <a href="{{ route('home') }}" class="footer-link">{{ config('app.name') }}</a>.
+                <a href="https://felixcodigitalltd.com.ng" class="footer-link">Felixco Digital Limited</a>.
                 All rights reserved.
             </div>
         </div>
