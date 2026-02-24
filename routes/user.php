@@ -8,7 +8,7 @@ use App\Http\Controllers\User\{
     ProfileController,
 };
 
-Route::middleware(['auth'])
+Route::middleware(['auth', 'user'])
     ->prefix('user')
     ->as('user.')
     ->group(function () {

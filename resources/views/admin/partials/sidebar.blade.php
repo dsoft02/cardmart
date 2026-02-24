@@ -85,6 +85,15 @@
         </li>
 
 
+        {{-- Profile --}}
+        <li class="menu-item {{ MenuHelper::active('admin.profile.*') }}">
+            <a href="{{ route('admin.profile.index') }}" class="menu-link">
+                <i class="menu-icon bx bx-user"></i>
+                <div>Profile</div>
+            </a>
+        </li>
+
+
         {{-- Logout --}}
         <li class="menu-item">
             <form method="POST" action="{{ route('logout') }}" class="d-inline-block p-0">

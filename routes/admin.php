@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\Admin\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OrderController;
@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\ExamTypeController;
 use App\Http\Controllers\Admin\PinController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ReportController;
-use App\Http\Controllers\Admin\SettingController;
 
 Route::middleware(['web', 'auth', 'admin'])
     ->prefix('admin')
@@ -78,18 +77,6 @@ Route::middleware(['web', 'auth', 'admin'])
 
         Route::get('reports/export/pdf', [ReportController::class, 'exportPdf'])
             ->name('reports.export.pdf');
-
-
-        /*
-        |--------------------------------------------------------------------------
-        | Settings
-        |--------------------------------------------------------------------------
-        */
-        Route::get('settings', [SettingController::class, 'index'])
-            ->name('settings.index');
-
-        Route::post('settings', [SettingController::class, 'update'])
-            ->name('settings.update');
 
 
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
