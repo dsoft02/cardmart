@@ -215,7 +215,7 @@
                 <a href="https://felixcodigitalltd.com.ng" target="_blank" class="text-white">Felixco Digital Limited,</a>
             </div>
             <div>
-                Powered By: <a href="https://ebendev.xyz" target="_blank">Ebendev</a>
+{{--                Powered By: <a href="https://ebendev.xyz" target="_blank">Ebendev</a>--}}
             </div>
         </div>
     </div>
