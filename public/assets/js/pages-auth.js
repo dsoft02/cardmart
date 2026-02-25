@@ -69,6 +69,21 @@ document.addEventListener('DOMContentLoaded', function () {
               }
             }
           },
+            'password_confirmation': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please confirm password'
+                    },
+                    identical: {
+                        compare: () => formAuthentication.querySelector('[name="password"]').value,
+                        message: 'The password and its confirmation do not match'
+                    },
+                    stringLength: {
+                        min: 8,
+                        message: 'Password must be more than 8 characters'
+                    }
+                }
+            },
           terms: {
             validators: {
               notEmpty: {

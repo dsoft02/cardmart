@@ -42,6 +42,13 @@ class NewPasswordController extends Controller
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function (User $user) use ($request) {
+
+                if (Hash::check($request->password, $user->password)) {
+                    throw \Illuminate\Validation\ValidationException::withMessages([
+                        'password' => 'You cannot use your previous password. Please choose a new one.',
+                    ]);
+                }
+
                 $user->forceFill([
                     'password' => Hash::make($request->password),
                     'remember_token' => Str::random(60),
@@ -51,12 +58,14 @@ class NewPasswordController extends Controller
             }
         );
 
-        // If the password was successfully reset, we will redirect the user back to
-        // the application's home authenticated view. If there is an error we can
-        // redirect them back to where they came from with their error message.
-        return $status == Password::PASSWORD_RESET
-                    ? redirect()->route('login')->with('status', __($status))
-                    : back()->withInput($request->only('email'))
-                        ->withErrors(['email' => __($status)]);
+        if ($status === Password::PASSWORD_RESET) {
+            return redirect()
+                ->route('login')
+                ->with('success', 'Your password has been reset successfully. You can now login.');
+        }
+
+        return back()
+            ->withInput($request->only('email'))
+            ->with('error', 'This password reset link is invalid or has expired.');
     }
 }
