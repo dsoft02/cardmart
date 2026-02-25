@@ -11,6 +11,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/exam/{slug}', [ExamController::class, 'show'])->name('exam.show');
 Route::post('/orders', [OrderController::class, 'create'])->name('order.store')->middleware('auth');
 Route::get('/payment/callback', [OrderController::class, 'callback'])->name('payment.callback');
+Route::post('/paystack/webhook', [WebhookController::class, 'handle']);
 
 require __DIR__.'/auth.php';
 require __DIR__.'/user.php';

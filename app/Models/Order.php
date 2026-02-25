@@ -28,6 +28,11 @@ class Order extends Model
         return $this->belongsTo(ExamType::class);
     }
 
+    public function orderPins()
+    {
+        return $this->hasMany(OrderPin::class);
+    }
+
     public function pins()
     {
         return $this->belongsToMany(

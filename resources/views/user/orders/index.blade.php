@@ -111,9 +111,17 @@
                                     ₦{{ $order->formatted_amount }}
                                 </h4>
 
-                                <span class="badge px-3 py-2 rounded-pill bg-{{ $order->status === 'paid' ? 'success' : 'warning' }}">
-                                {{ ucfirst($order->status) }}
-                            </span>
+                                <span class="badge px-3 py-2 rounded-pill
+                                    @if($order->status === 'paid')
+                                        bg-success
+                                    @elseif($order->status === 'failed')
+                                        bg-danger
+                                    @else
+                                        bg-warning text-dark
+                                    @endif
+                                ">
+                                    {{ ucfirst($order->status) }}
+                                </span>
                             </div>
 
                         </div>
